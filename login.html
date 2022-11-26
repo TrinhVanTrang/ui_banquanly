@@ -5,30 +5,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/1147679ae7.js"></script>
-    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="draw.css">
+    <title> Đăng nhập </title>
 
 </head>
 
 <body>
-    <div class="container">
-
+        <header class="container-fluid bg-white">
+            <div class="container">
+                    <center>
+                        <img src="logo.png">
+                    </center>
+            </div>
+        </header>
         <form id="form-login">
-            <div class="form-text">
-                <h1>Đăng nhập</h1>
-                <i class="fas fa-user"> </i>
-                <label> Tài khoản </label>
-                <input type="email" placeholder="Email" id="email" />
-            </div>
-            <div class="form-text">
-                <i class="fas fa-lock"> </i>
-                <label> Mật khẩu </label>
-                <input type="password" placeholder="Password" id="password" />
-            </div>
-            <input type="submit" id="btn">Đăng nhập</input>
+            <h1>Đăng nhập</h1>
+            <input type="email" placeholder="Email" id="email" required="" />
+            <input type="password" placeholder="Password" id="password" required="" />
+            <button type="submit" id="btn"> Login </button>
         </form>
-
-    </div>
+        <footer class="container-fluid bg-white py-3">
+            <div class="container text-Black text-center">
+                <p> Nhóm phát triển:</p>
+                <p>Phạm Ngọc Minh - MSV: 20020061 </p>
+                <p>Trịnh Hồng Quân - MSV: 20020211 </p>
+                <p>Trịnh Văn Tráng - MSV: 20020487 </p>
+            </div>
+        </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.0/axios.min.js"></script>
     <script>
         let role;
@@ -39,7 +43,7 @@
 
             e.preventDefault();
             axios
-                .post("https://c4c3-42-114-127-171.ap.ngrok.io/api/v1/users/login", {
+                .post("https://5b20-42-114-127-171.ap.ngrok.io/api/v1/users/login", {
                     email,
                     password
                 })
@@ -60,5 +64,3 @@
 
     </script>
 </body>
-
-</html>
