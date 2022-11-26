@@ -47,10 +47,3 @@ $(function () {
 
 });
 
-axios.get("http://localhost:3001/api/v1/admin/get-all-account")
-    .then(response => {
-
-        console.log("response", response.data)
-        const name = document.getElementById("Name");
-        console.log(name);
-    })
